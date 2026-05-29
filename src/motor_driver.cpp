@@ -5,7 +5,7 @@
 
 #include "config_pins.h"
 #include "motor_driver.h"
-#include "piezo_stage.h"
+#include "IR_stage.h"
 
 #define QUEUE_CAPACITY 24
 
@@ -158,16 +158,16 @@ void motorDriverUpdate() {
     return;
   }
 
-  // Shared single piezo for all motors:
+  // Shared single sensor for all motors:
   // ignore an already-held LOW at motor start, then stop on the next touch.
   if (waitForPiezoRelease) {
-    if (!piezoStageTriggered()) {
+    if (!IRStageTriggered()) {
       waitForPiezoRelease = false;
     }
     return;
   }
 
-  if (piezoStageTriggered()) {
+  if (IRStageTriggered()) {
     stopMotorByIdx(activeMotorIdx);
     Serial.printf("DONE M%d\n", activeMotorIdx + 1);
     isRunning = false;

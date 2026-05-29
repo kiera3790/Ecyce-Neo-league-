@@ -8,7 +8,7 @@ void IRStageBegin() {
 }
 
 bool IRStageTriggered() {
-  return digitalRead(IR_PIN) == LOW;
+  return digitalRead(IR_PIN) == HIGH;
 }
 
 void IRUnitTest() {

@@ -1,17 +1,35 @@
+// #pragma once
+
+// #include <Arduino.h>
+
+// // Network Credentials (Mobile Hotspot)
+// #define WIFI_SSID "KHIM"
+// #define WIFI_PASSWORD "12345789"
+
+// // MQTT Broker Settings (HiveMQ Cloud)
+// static constexpr char MQTT_BROKER_HOST[] = "broker.hivemq.com";
+// static constexpr uint16_t MQTT_BROKER_PORT = 1883;
+// static constexpr char MQTT_USERNAME[] = "";
+// static constexpr char MQTT_PASSWORD[] = "";
+// static constexpr char MQTT_CLIENT_ID[] = "esp32-pill-motor-001";
+
+// // Topic for device communication
+// static constexpr char MQTT_TOPIC_COMMAND[] = "ecyce/medilink/device1";
+
 #pragma once
 
 #include <Arduino.h>
 
-// Replace with your Raspberry Pi / router Wi-Fi credentials.
-static constexpr char WIFI_SSID[] = "Ecyce";
-static constexpr char WIFI_PASSWORD[] = "88888888";
+// Network Credentials (Mobile Hotspot)
+#define WIFI_SSID "Ven Gia Nghia"
+#define WIFI_PASSWORD "tramissocute"
 
-// MQTT broker settings (Mosquitto on Raspberry Pi).
-static constexpr char MQTT_BROKER_HOST[] = "192.168.1.10";
+// MQTT Broker Settings (Mosquitto Public)
+static constexpr char MQTT_BROKER_HOST[] = "172.20.10.4";
 static constexpr uint16_t MQTT_BROKER_PORT = 1883;
-static constexpr char MQTT_USERNAME[] = "";
+static constexpr char MQTT_USERNAME[] = ""; 
 static constexpr char MQTT_PASSWORD[] = "";
-static constexpr char MQTT_CLIENT_ID[] = "esp32-pill-motor";
+static constexpr char MQTT_CLIENT_ID[] = "esp32-pill-motor-001";
 
-// Topic Raspberry Pi publishes command payloads to.
-static constexpr char MQTT_TOPIC_COMMAND[] = "pill/motor/command";
+// Topic for device communication
+static constexpr char MQTT_TOPIC_COMMAND[] = "ecyce/medilink/device1";
